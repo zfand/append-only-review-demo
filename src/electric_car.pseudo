@@ -1,0 +1,8 @@
+class ElectricCar extends Car:
+    chargePercent = 100
+
+    method accelerate(amount):
+        if chargePercent <= 0:
+            error "Battery empty"
+        super.accelerate(amount)
+        chargePercent -= amount * 0.1
