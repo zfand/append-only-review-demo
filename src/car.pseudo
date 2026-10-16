@@ -1,0 +1,15 @@
+class Car:
+    speed = 0
+    running = false
+
+    method start():
+        running = true
+
+    method stop():
+        speed = 0
+        running = false
+
+    method accelerate(amount):
+        if not running:
+            error "Car is off"
+        speed += amount
